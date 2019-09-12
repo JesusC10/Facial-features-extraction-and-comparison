@@ -1,4 +1,6 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/yannlelorier/CLionProjects/FeatureExtraction
+opencv_calib3dopencv_coreopencv_dnnopencv_features2dopencv_flannopencv_gapiopencv_highguiopencv_imgcodecsopencv_imgprocopencv_mlopencv_objdetectopencv_photoopencv_stitchingopencv_videoopencv_videoio
+opencv_calib3dopencv_coreopencv_dnnopencv_features2dopencv_flannopencv_gapiopencv_highguiopencv_imgcodecsopencv_imgprocopencv_mlopencv_objdetectopencv_photoopencv_stitchingopencv_videoopencv_videoioopencv_face
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/yannlelorier/CLionProjects/FeatureExtraction/cmake-build-debug
