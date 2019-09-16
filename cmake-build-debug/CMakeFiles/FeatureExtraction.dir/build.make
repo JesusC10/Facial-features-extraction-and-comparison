@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/yannlelorier/CLionProjects/FeatureExtraction
+CMAKE_SOURCE_DIR = /Users/hectorrmanrique/CLionProjects/FeatureExtraction
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/yannlelorier/CLionProjects/FeatureExtraction/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/hectorrmanrique/CLionProjects/FeatureExtraction/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/FeatureExtraction.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/FeatureExtraction.dir/flags.make
 
 CMakeFiles/FeatureExtraction.dir/main.cpp.o: CMakeFiles/FeatureExtraction.dir/flags.make
 CMakeFiles/FeatureExtraction.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/yannlelorier/CLionProjects/FeatureExtraction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FeatureExtraction.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FeatureExtraction.dir/main.cpp.o -c /Users/yannlelorier/CLionProjects/FeatureExtraction/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/hectorrmanrique/CLionProjects/FeatureExtraction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FeatureExtraction.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FeatureExtraction.dir/main.cpp.o -c /Users/hectorrmanrique/CLionProjects/FeatureExtraction/main.cpp
 
 CMakeFiles/FeatureExtraction.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FeatureExtraction.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/yannlelorier/CLionProjects/FeatureExtraction/main.cpp > CMakeFiles/FeatureExtraction.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/hectorrmanrique/CLionProjects/FeatureExtraction/main.cpp > CMakeFiles/FeatureExtraction.dir/main.cpp.i
 
 CMakeFiles/FeatureExtraction.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FeatureExtraction.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/yannlelorier/CLionProjects/FeatureExtraction/main.cpp -o CMakeFiles/FeatureExtraction.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/hectorrmanrique/CLionProjects/FeatureExtraction/main.cpp -o CMakeFiles/FeatureExtraction.dir/main.cpp.s
 
 # Object files for target FeatureExtraction
 FeatureExtraction_OBJECTS = \
@@ -79,23 +79,56 @@ FeatureExtraction_EXTERNAL_OBJECTS =
 
 FeatureExtraction: CMakeFiles/FeatureExtraction.dir/main.cpp.o
 FeatureExtraction: CMakeFiles/FeatureExtraction.dir/build.make
-FeatureExtraction: /usr/local/lib/libopencv_dnn.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_gapi.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_stitching.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_aruco.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_bgsegm.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_bioinspired.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_ccalib.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_dnn_objdetect.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_dpm.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_freetype.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_fuzzy.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_hfs.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_img_hash.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_line_descriptor.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_quality.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_reg.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_rgbd.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_saliency.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_sfm.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_stereo.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_structured_light.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_superres.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_surface_matching.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_tracking.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_videostab.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_xfeatures2d.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_xobjdetect.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_xphoto.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_face.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_shape.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_datasets.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_plot.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_text.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_dnn.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_highgui.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_ml.4.1.1.dylib
-FeatureExtraction: /usr/local/lib/libopencv_objdetect.4.1.1.dylib
-FeatureExtraction: /usr/local/lib/libopencv_photo.4.1.1.dylib
-FeatureExtraction: /usr/local/lib/libopencv_stitching.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_phase_unwrapping.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_optflow.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_ximgproc.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_video.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_videoio.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_imgcodecs.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_objdetect.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_calib3d.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_features2d.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_flann.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libopencv_photo.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_imgproc.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_core.4.1.1.dylib
 FeatureExtraction: CMakeFiles/FeatureExtraction.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/yannlelorier/CLionProjects/FeatureExtraction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FeatureExtraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/hectorrmanrique/CLionProjects/FeatureExtraction/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FeatureExtraction"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FeatureExtraction.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +141,6 @@ CMakeFiles/FeatureExtraction.dir/clean:
 .PHONY : CMakeFiles/FeatureExtraction.dir/clean
 
 CMakeFiles/FeatureExtraction.dir/depend:
-	cd /Users/yannlelorier/CLionProjects/FeatureExtraction/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/yannlelorier/CLionProjects/FeatureExtraction /Users/yannlelorier/CLionProjects/FeatureExtraction /Users/yannlelorier/CLionProjects/FeatureExtraction/cmake-build-debug /Users/yannlelorier/CLionProjects/FeatureExtraction/cmake-build-debug /Users/yannlelorier/CLionProjects/FeatureExtraction/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/hectorrmanrique/CLionProjects/FeatureExtraction/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/hectorrmanrique/CLionProjects/FeatureExtraction /Users/hectorrmanrique/CLionProjects/FeatureExtraction /Users/hectorrmanrique/CLionProjects/FeatureExtraction/cmake-build-debug /Users/hectorrmanrique/CLionProjects/FeatureExtraction/cmake-build-debug /Users/hectorrmanrique/CLionProjects/FeatureExtraction/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/FeatureExtraction.dir/depend
 

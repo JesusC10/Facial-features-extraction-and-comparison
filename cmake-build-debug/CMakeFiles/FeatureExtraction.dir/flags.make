@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sd
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/Cellar/opencv/4.1.1_2/include/opencv4 -I/usr/local/Cellar/opencv/4.1.1_2/lib -isystem /usr/local/include/opencv4 
+CXX_INCLUDES = -I/usr/local/Cellar/opencv/4.1.1_2/lib -isystem /usr/local/Cellar/opencv/4.1.1_2/include/opencv4 
 
