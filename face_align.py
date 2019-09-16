@@ -51,7 +51,7 @@ def CropFace(image, eye_left=(30,50), eye_right=(60,50), offset_pct=(0.2,0.2), d
 
 def readFileNames():
     try:
-        inFile = open('data.csv')
+        inFile = open('att_faces_data.csv')
     except:
         raise IOError('There is no file named data.csv in current directory.')
         return False
@@ -76,5 +76,5 @@ if __name__ == "__main__":
     for img in images:
         image =  Image.open(img)
         print(img)
-        CropFace(image, eye_left=(35,50), eye_right=(60,50), offset_pct=(0.35,0.40), dest_sz=(92,112)).save("modified/"+str(counter)+".jpg")
+        CropFace(image, eye_left=(35,50), eye_right=(60,50), offset_pct=(0.35,0.40), dest_sz=(92,112)).save("modified/"+str(counter)+".pgm")
         counter += 1
