@@ -8,6 +8,8 @@ using namespace cv;
 using namespace cv::face;
 using namespace std;
 
+vector<int> PrecisionRate(Ptr<LBPHFaceRecognizer>, vector<int>, vector<Mat>);
+
 static void read_csv(const string& filename, vector<Mat>& images, vector<int>& labels, char separator = ';') {
     std::ifstream file(filename.c_str(), ifstream::in);
     if (!file) {
@@ -30,7 +32,6 @@ int main(int argc, const char *argv[]) {
     // Get the filename to your CSV.
     string fn_csv = string(argv[1]);
 
-    // These vectors hold the images and corresponding labels.
     vector<Mat> images; // Basic container of images for OpenCV. Each entry corresponds to the intensity of each pixel in a certain image.
     vector<int> labels; // Control variable for each test subject.
 
@@ -48,24 +49,53 @@ int main(int argc, const char *argv[]) {
         CV_Error(Error::StsError, error_message);
     }
 
-    Mat testSample;
-    int testLabel;
 
-    // Mat testSample = images[images.size() - 1]; // Store the last image of the last test subject.
-    // int testLabel = labels[labels.size() - 1]; // Store the last label of the last test subject.
-    for (int i = 9; i >= 0; i--) {
-        if (i == 0) {
-            testSample = images[images.size() - 1]; // Store the last image of the last test subject.
-            testLabel = labels[labels.size() - 1]; // Store the last label of the last test subject.
-            cout << testLabel << endl;
-        }
-        images.pop_back(); // Pop the last image of the last test subject (to avoid overlapping between the test image and the vector holding the images.
-        labels.pop_back(); // Pop the last label of the last test subject (to avoid overlapping between the test label and the vector holding the labels.
+
+    vector<Mat> testSamples;
+    vector<int> knownLabels;
+
+    int pos = fn_csv.rfind("/");
+
+    string basePath = fn_csv.substr(0,pos);
+    string pathToTest = basePath+"/test_data.csv";
+
+    try {
+        read_csv(pathToTest, testSamples, knownLabels);
+    }catch (const cv::Exception& e) {
+        cerr << "Error opening file \"" << fn_csv << "\". Reason: " << e.msg << endl;
+        exit(1);
     }
 
-    for (int i = 0; i < labels.size(); i++) {
-        cout << labels[i] << endl;
+    Ptr<LBPHFaceRecognizer> testModel = LBPHFaceRecognizer::create();
+    testModel->train(testSamples, knownLabels);
+
+    // How to get to input_images_pgm directory
+    string path_input = basePath+"/input_images_pgm/";
+//    format("%s%d.pgm",path_input,i);
+
+    vector<Mat> imagesToCompare;
+    for (int i = 0; i <= 9; ++i) {
+        imagesToCompare.push_back(imread(format("%s%d.pgm",path_input,i), 0)); // checar como brgs funciona format
+
     }
+
+    vector<int> labelsToCompare {-1,-1,-1,-1,-1,-1,-1,3,2,-1};
+
+    vector<int> hm = PrecisionRate(testModel, labelsToCompare, imagesToCompare);
+
+    cout << "HITS: " << hm[0] << endl;
+    cout << "MISSES: " << hm[1] << endl;
+
+
+
+    // FOR ONE TEST ONLY: UNCOMMENT THE NEXT 6 LINES
+    //Mat testSample;
+    //int testlabel;
+    //testSample = images[images.size() - 1]; // Store the last image of the last test subject.
+    //testLabel = labels[labels.size() - 1]; // Store the last label of the last test subject.
+    //images.pop_back(); // Pop the last image of the last test subject (to avoid overlapping between the test image and the vector holding the images.
+    //labels.pop_back(); // Pop the last label of the last test subject (to avoid overlapping between the test label and the vector holding the labels
+
 
     // The LBPHFaceRecognizer uses Extended Local Binary Patterns
     // (it's probably configurable with other operators at a later
@@ -88,16 +118,16 @@ int main(int argc, const char *argv[]) {
     Ptr<LBPHFaceRecognizer> model = LBPHFaceRecognizer::create(); // Instantiates the LBPHFaceRecognizer class.
     model->train(images, labels); // Calls the train method in LBPHFaceRecognizer. It associates labels with their corresponding faces (from the images vector).
 
-    // nt predictedLabel = model->predict(testSample); // Predicts the label of a given face after the train method has been called (comparison).
+    //int predictedLabel = model->predict(testSample); // Predicts the label of a given face after the train method has been called (comparison).
 
     // To get the confidence of a prediction call the model with:
     //
-    int predictedLabel = -1;
-    double confidence = 1.0;
-    model->predict(testSample, predictedLabel, confidence);
+//    int predictedLabel = -1;
+//    double confidence = 1.0;
+//    model->predict(testSample, predictedLabel, confidence);
 
-    string result_message = format("Predicted class = %d / Actual class = %d.", predictedLabel, testLabel);
-    cout << result_message << endl;
+    //string result_message = format("Predicted class = %d / Actual class = %d.", predictedLabel, testLabel);
+    //cout << result_message << endl;
     // First we'll use it to set the threshold of the LBPHFaceRecognizer
     // to 0.0 without retraining the model. This can be useful if
     // you are evaluating the model:
@@ -122,9 +152,31 @@ int main(int argc, const char *argv[]) {
     cout << model_info << endl;
     // We could get the histograms for example:
     vector<Mat> histograms = model->getHistograms();
-    // But should I really visualize it? Probably the length is interesting:
+
     cout << "Size of the histograms: " << histograms[0].total() << endl;
     cout << "Histograms [0]: " << histograms[0] << endl;
     return 0;
 
+}
+
+vector<int> PrecisionRate(Ptr<LBPHFaceRecognizer> model, vector<int> labelsToCompare, vector<Mat> imagesToCompare){ //known labels is just for testing purposes
+    vector<int> predictedLabels;
+    vector<int> hm;
+    int hit = 0, miss = 0;
+
+    for (int i = 0; i < imagesToCompare.size(); ++i) {
+        predictedLabels.push_back(model->predict(imagesToCompare[i]));
+
+        if(labelsToCompare[i]==predictedLabels[i]){
+            cout << "Jaman" << endl;
+            hit++;
+        }else{
+            cout << "Naman" << endl;
+            miss++;
+        }
+
+    }
+        hm.push_back(hit);
+        hm.push_back(miss);
+    return hm;
 }

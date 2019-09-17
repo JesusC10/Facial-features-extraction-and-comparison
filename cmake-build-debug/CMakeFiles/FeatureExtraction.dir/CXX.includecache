@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/hectorrmanrique/CLionProjects/FeatureExtraction/main.cpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/Facial-features-extraction-and-comparison/main.cpp
 opencv2/core.hpp
-/Users/hectorrmanrique/CLionProjects/FeatureExtraction/opencv2/core.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/Facial-features-extraction-and-comparison/opencv2/core.hpp
 opencv2/face.hpp
-/Users/hectorrmanrique/CLionProjects/FeatureExtraction/opencv2/face.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/Facial-features-extraction-and-comparison/opencv2/face.hpp
 opencv2/highgui.hpp
-/Users/hectorrmanrique/CLionProjects/FeatureExtraction/opencv2/highgui.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/Facial-features-extraction-and-comparison/opencv2/highgui.hpp
 iostream
 -
 fstream
