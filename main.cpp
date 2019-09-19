@@ -9,6 +9,7 @@ using namespace cv::face;
 using namespace std;
 
 vector<int> PrecisionRate(Ptr<LBPHFaceRecognizer>, vector<int>, vector<Mat>);
+string pathCreator(string, string);
 
 static void read_csv(const string& filename, vector<Mat>& images, vector<int>& labels, char separator = ';') {
     std::ifstream file(filename.c_str(), ifstream::in);
@@ -56,8 +57,10 @@ int main(int argc, const char *argv[]) {
 
     int pos = fn_csv.rfind("/");
 
-    string basePath = fn_csv.substr(0,pos);
-    string pathToTest = basePath+"/test_data.csv";
+    string basePath = fn_csv.substr(0,pos+1);
+
+    string pathToTest = pathCreator(basePath, "test_data.csv");
+
 
     try {
         read_csv(pathToTest, testSamples, knownLabels);
@@ -66,20 +69,20 @@ int main(int argc, const char *argv[]) {
         exit(1);
     }
 
+    // TEST WITH MULTIPLE PHOTOS
+    // BEGIN
     Ptr<LBPHFaceRecognizer> testModel = LBPHFaceRecognizer::create();
     testModel->train(testSamples, knownLabels);
 
+
     // How to get to input_images_pgm directory
-    string path_input = basePath+"/input_images_pgm/";
-//    format("%s%d.pgm",path_input,i);
 
     vector<Mat> imagesToCompare;
-    for (int i = 0; i <= 9; ++i) {
-        imagesToCompare.push_back(imread(format("%s%d.pgm",path_input,i), 0)); // checar como brgs funciona format
+    vector<int> labelsToCompare;
 
-    }
+    read_csv(pathCreator(basePath, "input_data.csv"), imagesToCompare, labelsToCompare);
 
-    vector<int> labelsToCompare {-1,-1,-1,-1,-1,-1,-1,3,2,-1};
+    labelsToCompare = {-1,-1,-1,-1,-1,-1,-1,-1,3,2};
 
     vector<int> hm = PrecisionRate(testModel, labelsToCompare, imagesToCompare);
 
@@ -164,19 +167,26 @@ vector<int> PrecisionRate(Ptr<LBPHFaceRecognizer> model, vector<int> labelsToCom
     vector<int> hm;
     int hit = 0, miss = 0;
 
-    for (int i = 0; i < imagesToCompare.size(); ++i) {
-        predictedLabels.push_back(model->predict(imagesToCompare[i]));
+    for (int i = 0; i < imagesToCompare.size(); i++) {
+        int item = model->predict(imagesToCompare[i]);
+        predictedLabels.push_back(item);
 
-        if(labelsToCompare[i]==predictedLabels[i]){
-            cout << "Jaman" << endl;
+
+        cout << "Predicted: " << predictedLabels[i] << "/Actual: " << labelsToCompare[i] << endl;
+
+        if(labelsToCompare[i] == predictedLabels[i])
             hit++;
-        }else{
-            cout << "Naman" << endl;
+        else
             miss++;
-        }
+
 
     }
+
         hm.push_back(hit);
         hm.push_back(miss);
     return hm;
+}
+
+string pathCreator(string basePath, string fileName){
+    return basePath+fileName;
 }
