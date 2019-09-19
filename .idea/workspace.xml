@@ -11,20 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5e9b149a-4c9f-442a-bdac-a5cea1c2d853" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/1.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/10.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/2.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/3.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/4.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/5.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/6.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/7.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/8.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/9.pgm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -63,10 +51,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+            <state relative-caret-position="7">
+              <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
+                <element signature="e#292#985#0" />
+                <element signature="e#5215#5273#0" />
+                <element signature="e#5664#6342#0" />
+                <element signature="e#6680#6723#0" />
+                <element signature="e#7000#7053#0" />
               </folding>
             </state>
           </provider>
@@ -156,22 +149,23 @@
       <workItem from="1568733009076" duration="805000" />
       <workItem from="1568829895447" duration="274000" />
       <workItem from="1568846263279" duration="703000" />
-      <workItem from="1568847009447" duration="1973000" />
+      <workItem from="1568847009447" duration="2307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8864000" />
+    <option name="totallyTimeSpent" value="9434000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14430244" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32970297" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.10891089" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -252,10 +246,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+        <state relative-caret-position="7">
+          <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#292#985#0" />
+            <element signature="e#5215#5273#0" />
+            <element signature="e#5664#6342#0" />
+            <element signature="e#6680#6723#0" />
+            <element signature="e#7000#7053#0" />
           </folding>
         </state>
       </provider>
