@@ -8,7 +8,7 @@ using namespace cv;
 using namespace cv::face;
 using namespace std;
 
-vector<int> precisionRate(Ptr<LBPHFaceRecognizer>, vector<int>, vector<Mat>);
+vector<int> HitOrMiss(Ptr<LBPHFaceRecognizer>, vector<int>, vector<Mat>);
 void printHist(Ptr<LBPHFaceRecognizer>);
 string pathCreator(string, string);
 Ptr<LBPHFaceRecognizer> LBPH(vector<Mat>, vector<int>);
@@ -47,14 +47,12 @@ int main(int argc, const char *argv[]) {
 
     int pos = fn_csv.rfind("/");
     string basePath = fn_csv.substr(0,pos+1);
-    string pathToTest = pathCreator(basePath, "test_data.csv");
-
     Ptr<LBPHFaceRecognizer> model;
 
     //Checks if the file is available.
     //Reading a part of the DB.
     try {
-        read_csv(pathToTest, samples, labels);
+        read_csv(fn_csv, samples, labels);
     }catch (const cv::Exception& e) {
         cerr << "Error opening file \"" << fn_csv << "\". Reason: " << e.msg << endl;
         exit(1);
@@ -73,13 +71,13 @@ int main(int argc, const char *argv[]) {
     // How to get to input_images_pgm directory
     read_csv(pathCreator(basePath, "input_data.csv"), imagesToCompare, labelsToCompare);
 
-    labelsToCompare = {-1,-1,-1,-1,-1,-1,-1,3,2,-1};
+    labelsToCompare = {-1,-1,-1,-1,-1,-1,-1,3,2,7,0};
 
-    vector<int> hm = precisionRate(model, labelsToCompare, imagesToCompare);
+    vector<int> hm = HitOrMiss(model, labelsToCompare, imagesToCompare);
 
     cout << "HITS: " << hm[0] << endl;
     cout << "MISSES: " << hm[1] << endl;
-    
+
 
     //Print Historgram
     printHist(model);
@@ -97,7 +95,7 @@ Ptr<LBPHFaceRecognizer> LBPH(vector<Mat> samples, vector<int> labels){
 
 }
 
-vector<int> precisionRate(Ptr<LBPHFaceRecognizer> model, vector<int> labelsToCompare, vector<Mat> imagesToCompare){ //known labels is just for testing purposes
+vector<int> HitOrMiss(Ptr<LBPHFaceRecognizer> model, vector<int> labelsToCompare, vector<Mat> imagesToCompare){ //known labels is just for testing purposes
     vector<int> predictedLabels;
     vector<int> hm;
     int hit = 0, miss = 0;
@@ -107,7 +105,7 @@ vector<int> precisionRate(Ptr<LBPHFaceRecognizer> model, vector<int> labelsToCom
         predictedLabels.push_back(item);
 
 
-        cout << "Predicted: " << predictedLabels[i] << "/Actual: " << labelsToCompare[i] << endl;
+        cout << "Predicted: " << predictedLabels[i] << "/ Actual: " << labelsToCompare[i] << endl;
 
         if(labelsToCompare[i] == predictedLabels[i])
             hit++;
