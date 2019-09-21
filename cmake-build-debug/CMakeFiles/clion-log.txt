@@ -1,21 +1,6 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/Facial-features-extraction-and-comparison"
--- The C compiler identification is AppleClang 10.0.1.10010046
--- The CXX compiler identification is AppleClang 10.0.1.10010046
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++
--- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found OpenCV: /usr/local (found version "4.1.1") 
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison
 opencv_calib3dopencv_coreopencv_dnnopencv_features2dopencv_flannopencv_gapiopencv_highguiopencv_imgcodecsopencv_imgprocopencv_mlopencv_objdetectopencv_photoopencv_stitchingopencv_videoopencv_videoioopencv_arucoopencv_bgsegmopencv_bioinspiredopencv_ccalibopencv_datasetsopencv_dnn_objdetectopencv_dpmopencv_faceopencv_freetypeopencv_fuzzyopencv_hfsopencv_img_hashopencv_line_descriptoropencv_optflowopencv_phase_unwrappingopencv_plotopencv_qualityopencv_regopencv_rgbdopencv_saliencyopencv_sfmopencv_shapeopencv_stereoopencv_structured_lightopencv_superresopencv_surface_matchingopencv_textopencv_trackingopencv_videostabopencv_xfeatures2dopencv_ximgprocopencv_xobjdetectopencv_xphoto
 opencv_calib3dopencv_coreopencv_dnnopencv_features2dopencv_flannopencv_gapiopencv_highguiopencv_imgcodecsopencv_imgprocopencv_mlopencv_objdetectopencv_photoopencv_stitchingopencv_videoopencv_videoioopencv_arucoopencv_bgsegmopencv_bioinspiredopencv_ccalibopencv_datasetsopencv_dnn_objdetectopencv_dpmopencv_faceopencv_freetypeopencv_fuzzyopencv_hfsopencv_img_hashopencv_line_descriptoropencv_optflowopencv_phase_unwrappingopencv_plotopencv_qualityopencv_regopencv_rgbdopencv_saliencyopencv_sfmopencv_shapeopencv_stereoopencv_structured_lightopencv_superresopencv_surface_matchingopencv_textopencv_trackingopencv_videostabopencv_xfeatures2dopencv_ximgprocopencv_xobjdetectopencv_xphotoopencv_face
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/Facial-features-extraction-and-comparison/cmake-build-debug
+-- Build files have been written to: /Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/cmake-build-debug

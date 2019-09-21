@@ -17,7 +17,7 @@ include_directories(${FeatureExtraction_Include})
 set(OP ${OpenCV_LIBS} "opencv_face")
 message(${OP})
 
-add_executable(FeatureExtraction main.cpp)
+add_executable(FeatureExtraction Executable.cpp)
 target_include_directories(FeatureExtraction PRIVATE /usr/local/Cellar/opencv/4.1.1_2/lib)
 
 target_link_libraries(FeatureExtraction ${OP})

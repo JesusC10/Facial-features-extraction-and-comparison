@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/Facial-features-extraction-and-comparison/main.cpp" "/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/Facial-features-extraction-and-comparison/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/main.cpp.o"
+  "/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/Executable.cpp" "/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/Executable.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -8,6 +8,8 @@ using namespace cv;
 using namespace cv::face;
 using namespace std;
 
+
+
 vector<int> HitOrMiss(Ptr<LBPHFaceRecognizer>, vector<int>, vector<Mat>);
 void printHist(Ptr<LBPHFaceRecognizer>);
 string pathCreator(string, string);

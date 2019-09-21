@@ -1,4 +1,4 @@
-# Install script for directory: /Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/Facial-features-extraction-and-comparison
+# Install script for directory: /Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/Facial-features-extraction-and-comparison/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
