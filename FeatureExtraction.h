@@ -1,6 +1,7 @@
 #include "opencv2/core.hpp"
 #include "opencv2/face.hpp"
 #include "opencv2/highgui.hpp"
+#include "opencv2/imgproc.hpp" //comparehist is here
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -12,70 +13,56 @@ using namespace std;
 
 class FeatureExtraction {
 private:
-    vector<Mat> samples;
-    vector<int> labels;
     Ptr<LBPHFaceRecognizer> model;
+    vector<Mat> histograms; //to access the histograms,
+    //they must be calculated all at once, so an attribute was declared
 
-    Ptr<LBPHFaceRecognizer> LBPH(vector<Mat> samples, vector<int> labels);
+    Ptr<LBPHFaceRecognizer> LBPH();
 
 public:
-    FeatureExtraction(vector<Mat> s, vector<int> l) {
-        samples = s;
-        labels = l;
-        model = LBPH(samples, labels);
+    FeatureExtraction() {
+        model = LBPH();
     }
-    vector<int> HitOrMiss(vector<int> labelsToCompare, vector<Mat> imagesToCompare); //known labels is just for testing purposes
-    void printHist();
+    Mat getHistogram(int index);
+    double compareFeatures(Mat h1, Mat h2, int method);
+    void trainDataSet(vector<Mat> samples, vector<int> labels);
+    void updateDataSet(vector<Mat> samples, vector<int> labels);
 };
 
 
-Ptr<LBPHFaceRecognizer> FeatureExtraction::LBPH(vector<Mat> samples, vector<int> labels){
-
-    Ptr<LBPHFaceRecognizer> model = LBPHFaceRecognizer::create(); // Instantiates the LBPHFaceRecognizer class.
-    model->train(samples, labels); // Calls the train method in LBPHFaceRecognizer. It associates labels with their corresponding faces (from the images vector).
-
+Ptr<LBPHFaceRecognizer> FeatureExtraction::LBPH(){
+    Ptr<LBPHFaceRecognizer> model = LBPHFaceRecognizer::create(); //Instantiates the LBPHFaceRecognizer class.
     return model;
-
 }
 
-vector<int> FeatureExtraction::HitOrMiss(vector<int> labelsToCompare, vector<Mat> imagesToCompare){ //known labels is just for testing purposes
-    vector<int> predictedLabels;
-    vector<int> hm;
-    int hit = 0, miss = 0;
-
-    for (int i = 0; i < imagesToCompare.size(); i++) {
-        int item = model->predict(imagesToCompare[i]);
-        predictedLabels.push_back(item);
-
-
-        cout << "Predicted: " << predictedLabels[i] << "/ Actual: " << labelsToCompare[i] << endl;
-
-        if(labelsToCompare[i] == predictedLabels[i])
-            hit++;
-        else
-            miss++;
-
-
-    }
-
-    hm.push_back(hit);
-    hm.push_back(miss);
-    return hm;
+void FeatureExtraction::trainDataSet(vector<Mat> samples, vector<int> labels){
+    model->train(samples, labels); // Calls the train method in LBPHFaceRecognizer.
+    // It associates labels with their corresponding faces (from the images vector).
+    histograms = model->getHistograms();
 }
 
+void FeatureExtraction::updateDataSet(vector<Mat> samples, vector<int> labels){
+    model->update(samples, labels); // Calls the train method in LBPHFaceRecognizer.
+    // It associates labels with their corresponding faces (from the images vector).
+    histograms = model->getHistograms();
+}
 
-void FeatureExtraction::printHist(){
-    cout << "Model Information:" << endl;
-    string model_info = format("\tLBPH(radius=%i, neighbors=%i, grid_x=%i, grid_y=%i, threshold=%.2f)",
-                               model->getRadius(),
-                               model->getNeighbors(),
-                               model->getGridX(),
-                               model->getGridY(),
-                               model->getThreshold());
-    cout << model_info << endl;
-    // We could get the histograms for example:
-    vector<Mat> histograms = model->getHistograms();
+Mat FeatureExtraction::getHistogram(int index){
+    return histograms[index];
+}
 
-    cout << "Size of the histograms: " << histograms[0].total() << endl;
-    cout << "Histograms [0]: " << histograms[0] << endl;
+double FeatureExtraction::compareFeatures(Mat h1, Mat h2, int method){
+    /*
+     * Methods: From 0 to 5
+     * 0: Correlation
+     * 1: Chi-squared
+     * 2: Intersection
+     * 3: Bhattacharyya
+     * 4: Synonym
+     * 5: Alternative Chi-Squared
+     */
+    double dist = 0.0;
+    dist = compareHist(h1,h2,method);
+    return dist;
+
 }

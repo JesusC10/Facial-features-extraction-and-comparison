@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/Executable.cpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/Executable.cpp
 FeatureExtraction.h
-/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/FeatureExtraction.h
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/FeatureExtraction.h
 opencv2/core.hpp
-/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/opencv2/core.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/core.hpp
 opencv2/face.hpp
-/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/opencv2/face.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/face.hpp
 opencv2/highgui.hpp
-/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/opencv2/highgui.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/highgui.hpp
 iostream
 -
 fstream
@@ -22,13 +22,15 @@ fstream
 sstream
 -
 
-/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/FeatureExtraction.h
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/FeatureExtraction.h
 opencv2/core.hpp
-/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/opencv2/core.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/core.hpp
 opencv2/face.hpp
-/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/opencv2/face.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/face.hpp
 opencv2/highgui.hpp
-/Users/hectorrmanrique/CLionProjects/Facial-features-extraction-and-comparison/opencv2/highgui.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/highgui.hpp
+opencv2/imgproc.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/imgproc.hpp
 iostream
 -
 fstream

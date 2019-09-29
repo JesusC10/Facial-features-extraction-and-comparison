@@ -43,10 +43,6 @@ int main(int argc, const char *argv[]) {
     vector<Mat> samples; // Basic container of images for OpenCV. Each entry corresponds to the intensity of each pixel in a certain image.
     vector<int> labels; // Control variable for each test subject.
 
-    vector<Mat> imagesToCompare; //This are the images that we want to know if they exist in the DB.
-    vector<int> labelsToCompare; //This are the labels that we are going to assign to the test images.
-
-
     int pos = fn_csv.rfind("/");
     string basePath = fn_csv.substr(0,pos+1);
 
@@ -66,16 +62,23 @@ int main(int argc, const char *argv[]) {
     }
 
     // How to get to input_images_pgm directory
-    read_csv(pathCreator(basePath, "input_data.csv"), imagesToCompare, labelsToCompare);
+    //read_csv(pathCreator(basePath, "input_data.csv"), imagesToCompare, labelsToCompare);
 
-    labelsToCompare = {-1,-1,-1,-1,-1,-1,-1,3,2,7,0};
+    FeatureExtraction *fe = new FeatureExtraction();
+    fe->trainDataSet(samples, labels);
 
+    //
 
+    double comparisonRes;
+    Mat incomingImage = fe->getHistogram(80);
 
-    FeatureExtraction *fe = new FeatureExtraction(samples, labels);
+    for (int i = 0; i <= 5; ++i) {
+        for (int j = 0; j < 90; ++j) {
+            comparisonRes = fe->compareFeatures(incomingImage,fe->getHistogram(j),i);
+            cout << "Comparison result w/ method " << i << ": "<< comparisonRes << " " << j << endl;
 
-    fe->HitOrMiss(labelsToCompare, imagesToCompare);
-    fe->printHist();
+        }
+    }
 
 
 

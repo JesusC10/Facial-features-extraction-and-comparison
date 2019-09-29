@@ -7,7 +7,7 @@ find_package(OpenCV REQUIRED)
 message(${OpenCV_LIBS})
 
 
-
+#DLIB intalado, cambiar el include. (homebrew)
 set(FeatureExtraction_Include /usr/local/Cellar/opencv/4.1.1_2/include/opencv4)
 
 include_directories(${FeatureExtraction_Include})

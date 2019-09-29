@@ -33,5 +33,5 @@ if __name__ == '__main__':
     base_path = sys.argv[1]
     separator = ";"
     label = 0
-    # write_modified(base_path, separator,label)
+    write_modified(base_path, separator,label)
     write_input(base_path, separator)
