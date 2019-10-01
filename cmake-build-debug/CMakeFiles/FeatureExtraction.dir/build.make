@@ -107,6 +107,7 @@ FeatureExtraction: /usr/local/lib/libopencv_xfeatures2d.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_xobjdetect.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_xphoto.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_face.4.1.1.dylib
+FeatureExtraction: dlib_build/libdlib.a
 FeatureExtraction: /usr/local/lib/libopencv_shape.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_datasets.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_plot.4.1.1.dylib
@@ -127,6 +128,13 @@ FeatureExtraction: /usr/local/lib/libopencv_flann.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_photo.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_imgproc.4.1.1.dylib
 FeatureExtraction: /usr/local/lib/libopencv_core.4.1.1.dylib
+FeatureExtraction: /usr/local/lib/libgif.dylib
+FeatureExtraction: /usr/local/lib/libpng.dylib
+FeatureExtraction: /usr/lib/libz.dylib
+FeatureExtraction: /usr/local/lib/libjpeg.dylib
+FeatureExtraction: /usr/lib/libcblas.dylib
+FeatureExtraction: /usr/lib/liblapack.dylib
+FeatureExtraction: /usr/lib/libsqlite3.dylib
 FeatureExtraction: CMakeFiles/FeatureExtraction.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FeatureExtraction"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FeatureExtraction.dir/link.txt --verbose=$(VERBOSE)

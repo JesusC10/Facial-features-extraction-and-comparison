@@ -1,5 +1,19 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison"
 opencv_calib3dopencv_coreopencv_dnnopencv_features2dopencv_flannopencv_gapiopencv_highguiopencv_imgcodecsopencv_imgprocopencv_mlopencv_objdetectopencv_photoopencv_stitchingopencv_videoopencv_videoioopencv_arucoopencv_bgsegmopencv_bioinspiredopencv_ccalibopencv_datasetsopencv_dnn_objdetectopencv_dpmopencv_faceopencv_freetypeopencv_fuzzyopencv_hfsopencv_img_hashopencv_line_descriptoropencv_optflowopencv_phase_unwrappingopencv_plotopencv_qualityopencv_regopencv_rgbdopencv_saliencyopencv_sfmopencv_shapeopencv_stereoopencv_structured_lightopencv_superresopencv_surface_matchingopencv_textopencv_trackingopencv_videostabopencv_xfeatures2dopencv_ximgprocopencv_xobjdetectopencv_xphoto
+-- Using CMake version: 3.14.2
+-- Compiling dlib version: 19.18.0
+-- Found system copy of libpng: /usr/local/lib/libpng.dylib;/usr/lib/libz.dylib
+-- Found system copy of libjpeg: /usr/local/lib/libjpeg.dylib
+-- Searching for BLAS and LAPACK
+-- Searching for BLAS and LAPACK
+-- Checking for module 'cblas'
+--   No package 'cblas' found
+-- Checking for module 'lapack'
+--   No package 'lapack' found
+-- Found OpenBLAS library
+-- Found LAPACK library
+-- Building a C++11 test project to see if your compiler supports C++11
+-- C++11 activated.
 opencv_calib3dopencv_coreopencv_dnnopencv_features2dopencv_flannopencv_gapiopencv_highguiopencv_imgcodecsopencv_imgprocopencv_mlopencv_objdetectopencv_photoopencv_stitchingopencv_videoopencv_videoioopencv_arucoopencv_bgsegmopencv_bioinspiredopencv_ccalibopencv_datasetsopencv_dnn_objdetectopencv_dpmopencv_faceopencv_freetypeopencv_fuzzyopencv_hfsopencv_img_hashopencv_line_descriptoropencv_optflowopencv_phase_unwrappingopencv_plotopencv_qualityopencv_regopencv_rgbdopencv_saliencyopencv_sfmopencv_shapeopencv_stereoopencv_structured_lightopencv_superresopencv_surface_matchingopencv_textopencv_trackingopencv_videostabopencv_xfeatures2dopencv_ximgprocopencv_xobjdetectopencv_xphotoopencv_face
 -- Configuring done
 -- Generating done

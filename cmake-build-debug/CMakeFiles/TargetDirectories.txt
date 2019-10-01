@@ -1,3 +1,6 @@
 /Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/cmake-build-debug/CMakeFiles/FeatureExtraction.dir
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/cmake-build-debug/dlib_build/CMakeFiles/rebuild_cache.dir
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/cmake-build-debug/dlib_build/CMakeFiles/edit_cache.dir
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/cmake-build-debug/dlib_build/CMakeFiles/dlib.dir

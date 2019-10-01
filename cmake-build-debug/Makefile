@@ -123,6 +123,19 @@ FeatureExtraction/fast:
 	$(MAKE) -f CMakeFiles/FeatureExtraction.dir/build.make CMakeFiles/FeatureExtraction.dir/build
 .PHONY : FeatureExtraction/fast
 
+#=============================================================================
+# Target rules for targets named dlib
+
+# Build rule for target.
+dlib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dlib
+.PHONY : dlib
+
+# fast build rule for target.
+dlib/fast:
+	$(MAKE) -f dlib_build/CMakeFiles/dlib.dir/build.make dlib_build/CMakeFiles/dlib.dir/build
+.PHONY : dlib/fast
+
 Executable.o: Executable.cpp.o
 
 .PHONY : Executable.o
@@ -159,6 +172,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... FeatureExtraction"
+	@echo "... dlib"
 	@echo "... Executable.o"
 	@echo "... Executable.i"
 	@echo "... Executable.s"

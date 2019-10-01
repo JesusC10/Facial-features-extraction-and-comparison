@@ -65,7 +65,7 @@ int main(int argc, const char *argv[]) {
     //read_csv(pathCreator(basePath, "input_data.csv"), imagesToCompare, labelsToCompare);
 
     FeatureExtraction *fe = new FeatureExtraction();
-    fe->trainDataSet(samples, labels);
+//    fe->trainDataSet(samples, labels);
 
     //
 

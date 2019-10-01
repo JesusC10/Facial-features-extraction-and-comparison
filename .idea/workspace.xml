@@ -3,6 +3,7 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="FeatureExtraction" targetName="FeatureExtraction" />
+      <config projectName="FeatureExtraction" targetName="dlib" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -17,38 +18,22 @@
       <change beforePath="$PROJECT_DIR$/Executable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Executable.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FeatureExtraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/FeatureExtraction.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/Executable.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/Executable.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/input_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/photos/10.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/photos/11.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/photos/8.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_images_pgm/photos/9.pgm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modified_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/modified_data.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,14 +48,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Executable.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="69" column="43" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="309">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/Cellar/dlib/19.17/include/dlib/image_transforms/assign_image.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -78,21 +69,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FeatureExtraction.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="53" column="41" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="41" />
+            <state relative-caret-position="69">
+              <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
+                <element signature="e#433#550#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modified_data.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+        <entry file="file:///usr/local/Cellar/dlib/19.17/include/dlib/dnn.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#330#365#0" expanded="true" />
+                <element signature="e#374#398#0" expanded="true" />
+                <element signature="e#1017#1038#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -104,9 +111,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/create_csv.py" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/FeatureExtraction.h" />
         <option value="$PROJECT_DIR$/Executable.cpp" />
+        <option value="$PROJECT_DIR$/FeatureExtraction.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -128,17 +135,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FeatureExtraction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Facial-features-extraction-and-comparison" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -159,12 +156,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="CMake Application.FeatureExtraction">
     <configuration name="FeatureExtraction" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;$PROJECT_DIR$/modified_data.csv&quot;" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FeatureExtraction" TARGET_NAME="FeatureExtraction" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FeatureExtraction" RUN_TARGET_NAME="FeatureExtraction">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="dlib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FeatureExtraction" TARGET_NAME="dlib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.FeatureExtraction" />
+      <item itemvalue="CMake Application.dlib" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -186,18 +192,25 @@
       <workItem from="1569218131234" duration="624000" />
       <workItem from="1569248478941" duration="2660000" />
       <workItem from="1569513238106" duration="453000" />
-      <workItem from="1569783076706" duration="3728000" />
+      <workItem from="1569783076706" duration="4199000" />
+      <workItem from="1569855307742" duration="664000" />
+      <workItem from="1569857642983" duration="2431000" />
+      <workItem from="1569862690813" duration="353000" />
+      <workItem from="1569931327867" duration="445000" />
+      <workItem from="1569934111541" duration="1521000" />
+      <workItem from="1569942301082" duration="1653000" />
+      <workItem from="1569960194578" duration="1593000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7465000" />
+    <option name="totallyTimeSpent" value="16596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21173105" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22889842" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -209,7 +222,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Floobits" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Messages" order="9" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" />
@@ -220,7 +233,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21173105" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21459228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -291,13 +304,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/opencv/4.1.1_2/include/opencv4/opencv2/face/facerec.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="148" column="41" selection-start-line="148" selection-start-column="41" selection-end-line="148" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/opencv/4.1.1_2/include/opencv4/opencv2/face.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2105">
@@ -305,13 +311,6 @@
           <folding>
             <element signature="e#16789#16824#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -334,13 +333,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FeatureExtraction.h">
+    <entry file="file:///usr/local/Cellar/opencv/4.1.1_2/include/opencv4/opencv2/face/facerec.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="53" column="41" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-325">
+          <caret line="125" column="19" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dlib/19.17/include/dlib/pixel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dlib/19.17/include/dlib/matrix/matrix.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-907">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/complex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="838" selection-start-line="838" selection-end-line="838" />
         </state>
       </provider>
     </entry>
@@ -350,13 +367,47 @@
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
+    <entry file="file:///usr/local/Cellar/dlib/19.17/include/dlib/dnn.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#330#365#0" expanded="true" />
+            <element signature="e#374#398#0" expanded="true" />
+            <element signature="e#1017#1038#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Executable.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="69" column="43" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="43" />
+        <state relative-caret-position="309">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dlib/19.17/include/dlib/image_transforms/assign_image.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureExtraction.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#433#550#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
         </state>
       </provider>
     </entry>
