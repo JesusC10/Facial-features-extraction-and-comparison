@@ -61,24 +61,25 @@ int main(int argc, const char *argv[]) {
         CV_Error(Error::StsError, error_message);
     }
 
-    // How to get to input_images_pgm directory
-    //read_csv(pathCreator(basePath, "input_data.csv"), imagesToCompare, labelsToCompare);
+
+
+
+
+
+
 
     FeatureExtraction *fe = new FeatureExtraction();
-//    fe->trainDataSet(samples, labels);
 
-    //
+    cv::Mat descriptor1 = fe->ComputeDescriptorForFace(samples[1]);
+    cv::Mat descriptor2 = fe->ComputeDescriptorForFace(samples[2]);
 
-    double comparisonRes;
-    Mat incomingImage = fe->getHistogram(80);
+    cout << descriptor1 << endl;
+    cout << descriptor2 << endl;
 
-    for (int i = 0; i <= 5; ++i) {
-        for (int j = 0; j < 90; ++j) {
-            comparisonRes = fe->compareFeatures(incomingImage,fe->getHistogram(j),i);
-            cout << "Comparison result w/ method " << i << ": "<< comparisonRes << " " << j << endl;
+    double compareRes = fe->compareFeatures(descriptor1,descriptor2);
 
-        }
-    }
+    cout << compareRes <<endl;
+
 
 
 
