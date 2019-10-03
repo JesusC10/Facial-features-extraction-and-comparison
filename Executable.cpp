@@ -1,5 +1,8 @@
 #include "FeatureExtraction.h"
-#include "opencv2/core.hpp"
+#include <opencv2/core.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
 #include "opencv2/face.hpp"
 #include "opencv2/highgui.hpp"
 #include <iostream>
@@ -23,7 +26,7 @@ static void read_csv(const string& filename, vector<Mat>& images, vector<int>& l
         getline(liness, path, separator);
         getline(liness, classlabel);
         if(!path.empty() && !classlabel.empty()) {
-            images.push_back(imread(path, 0));
+            images.push_back(imread(path, 1));
             labels.push_back(atoi(classlabel.c_str()));
         }
     }
@@ -68,17 +71,40 @@ int main(int argc, const char *argv[]) {
 
 
 
-    FeatureExtraction *fe = new FeatureExtraction();
+    FeatureExtraction *fe = new FeatureExtraction("/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/ResNetModel/dlib_face_recognition_resnet_model_v1.dat");
 
-    cv::Mat descriptor1 = fe->ComputeDescriptorForFace(samples[1]);
-    cv::Mat descriptor2 = fe->ComputeDescriptorForFace(samples[2]);
+//    String windowName = "Constanza"; //Name of the window
+//
+//    namedWindow(windowName); // Create a window
+//
+//    imshow(windowName, samples[0]); // Show our image inside the created window.
+//
+//    waitKey(0);
 
-    cout << descriptor1 << endl;
-    cout << descriptor2 << endl;
 
-    double compareRes = fe->compareFeatures(descriptor1,descriptor2);
+    cv::Mat descriptor1 = fe->ComputeDescriptorForFace(samples[0]); //George Constanza Face no.1
+    cv::Mat descriptor2 = fe->ComputeDescriptorForFace(samples[1]); // George Constanza face no.2
+    cv::Mat descriptor3 = fe->ComputeDescriptorForFace(samples[2]); //Seinfeld face no.1
+    cv::Mat descriptor4 = fe->ComputeDescriptorForFace(samples[3]); //Seinfeld face no.2
+    
+    double compareRes;
 
-    cout << compareRes <<endl;
+    compareRes = fe->compareFeatures(descriptor1,descriptor2,1);
+    cout << compareRes << endl;
+    if (abs(compareRes)>5.0)
+        cout<< "They are not the same person" << endl;
+    else
+        cout << "They are the same person" << endl;
+    compareRes = fe->compareFeatures(descriptor1,descriptor3,1);
+    if (abs(compareRes)>5.0)
+        cout<< "They are not the same person" << endl;
+    else
+        cout << "They are the same person" << endl;
+    compareRes = fe->compareFeatures(descriptor1,descriptor4,1);
+    if (abs(compareRes)>5.0)
+        cout<< "They are not the same person" << endl;
+    else
+        cout << "They are the same person" << endl;
 
 
 

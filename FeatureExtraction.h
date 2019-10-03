@@ -18,8 +18,8 @@ private:
     anet_type net;
 
 public:
-    FeatureExtraction() {
-        dlib::deserialize("./ResNetModel/dlib_face_recognition_resnet_model_v1.dat") >> net;
+    FeatureExtraction(string url) {
+        dlib::deserialize(url) >> net;
     }
     cv::Mat ComputeDescriptorForFace(cv::Mat &face);
     double compareFeatures(cv::Mat h1, cv::Mat h2, int method);
@@ -27,14 +27,14 @@ public:
 
 
 cv::Mat FeatureExtraction::ComputeDescriptorForFace(cv::Mat &face){
-    if (face.channels()>1){
-        cv::cvtColor(face, face, cv::COLOR_BGR2GRAY);
-    }
+//    if (face.channels()>1){
+//        cv::cvtColor(face, face, cv::COLOR_BGR2GRAY);
+//    }
     //como decir que use el struct de grayscale_pixel_traits?
-    dlib::cv_image<unsigned char> cvImage(face);
-    dlib::matrix<unsigned char> dlibImage;
+    dlib::cv_image<dlib::bgr_pixel> cvImage(face);
+    dlib::matrix<dlib::rgb_pixel> dlibImage;
     dlib::assign_image(dlibImage, cvImage);
-    std::vector<dlib::matrix<unsigned char>> faces(1, dlibImage);
+    std::vector<dlib::matrix<dlib::rgb_pixel>> faces(1, dlibImage);
     dlib::matrix<float,0,1> faceDescriptor = mean(mat(net(faces))); //computing face descriptor
 
     cv::Mat descriptor = dlib::toMat(faceDescriptor);
