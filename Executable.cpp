@@ -1,10 +1,6 @@
 #include "FeatureExtraction.h"
-#include <opencv2/core.hpp>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-
-#include "opencv2/face.hpp"
-#include "opencv2/highgui.hpp"
+//#include <opencv2/core/core.hpp>
+//#include <opencv2/highgui/highgui.hpp>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -81,34 +77,38 @@ int main(int argc, const char *argv[]) {
 //
 //    waitKey(0);
 
-
-    cv::Mat descriptor1 = fe->ComputeDescriptorForFace(samples[0]); //George Constanza Face no.1
-    cv::Mat descriptor2 = fe->ComputeDescriptorForFace(samples[1]); // George Constanza face no.2
-    cv::Mat descriptor3 = fe->ComputeDescriptorForFace(samples[2]); //Seinfeld face no.1
-    cv::Mat descriptor4 = fe->ComputeDescriptorForFace(samples[3]); //Seinfeld face no.2
-    
-    double compareRes;
-
-    compareRes = fe->compareFeatures(descriptor1,descriptor2,1);
-    cout << compareRes << endl;
-    if (abs(compareRes)>5.0)
-        cout<< "They are not the same person" << endl;
-    else
-        cout << "They are the same person" << endl;
-    compareRes = fe->compareFeatures(descriptor1,descriptor3,1);
-    if (abs(compareRes)>5.0)
-        cout<< "They are not the same person" << endl;
-    else
-        cout << "They are the same person" << endl;
-    compareRes = fe->compareFeatures(descriptor1,descriptor4,1);
-    if (abs(compareRes)>5.0)
-        cout<< "They are not the same person" << endl;
-    else
-        cout << "They are the same person" << endl;
+    bool flag = false;
+    double hits = 0;
+    int misses = 0;
 
 
+    for (int i = 0; i < 10; ++i) {
+        dlib::matrix<float,0,1> descriptor1 = fe->ComputeDescriptorForFaceDlib(samples[i]);
+        for (int j = 0; j < samples.size(); ++j) {
+            if(i != j){
+                dlib::matrix<float,0,1> descriptor2 = fe->ComputeDescriptorForFaceDlib(samples[j]);
+                double compareRes = fe->compareFeaturesDlib(descriptor1, descriptor2);
+                cout << "Comparison between picture " << i << " and picture " << j << " => " << compareRes << " | Prediction: ";
+                if(compareRes<0.65){
+                    flag = true;
+                    cout << "They are the same person. ";
+                }
+                else{
+                    flag = false;
+                    cout << "They aren't the same person. ";
+                }
+                if ((labels[i]==labels[j] && flag) || (labels[i]!=labels[j] && !flag)){
+                    cout << "Correct!" << endl;
+                    hits++;
 
-
+                }
+                else{
+                    cout << "Wrong." << endl;
+                    misses++;
+                }
+            }
+        }
+    }
+    cout << "Accuracy after rotation: " << hits*100/720 << endl;
     return 0;
-
 }
