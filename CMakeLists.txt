@@ -20,7 +20,7 @@ include_directories(${Dlib_feat})
 set(OP ${OpenCV_LIBS} "opencv_face")
 message(${OP})
 
-add_executable(FeatureExtraction Executable.cpp NeuralNetworkTemplate.h)
+add_executable(FeatureExtraction Executable.cpp NeuralNetworkTemplate.h FeatureExtraction.h)
 target_include_directories(FeatureExtraction PRIVATE /usr/local/Cellar/opencv/4.1.1_2/lib)
 
 target_link_libraries(FeatureExtraction ${OP} dlib::dlib)

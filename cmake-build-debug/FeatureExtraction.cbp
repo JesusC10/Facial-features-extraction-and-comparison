@@ -437,6 +437,9 @@
 		<Unit filename="/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/Executable.cpp">
 			<Option target="FeatureExtraction"/>
 		</Unit>
+		<Unit filename="/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/FeatureExtraction.h">
+			<Option target="FeatureExtraction"/>
+		</Unit>
 		<Unit filename="/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/NeuralNetworkTemplate.h">
 			<Option target="FeatureExtraction"/>
 		</Unit>

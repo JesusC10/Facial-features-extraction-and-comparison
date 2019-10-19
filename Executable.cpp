@@ -1,4 +1,4 @@
-#include "FeatureExtraction.h"
+#include "FeatureExtraction.cpp"
 //#include <opencv2/core/core.hpp>
 //#include <opencv2/highgui/highgui.hpp>
 #include <iostream>
@@ -60,55 +60,54 @@ int main(int argc, const char *argv[]) {
         CV_Error(Error::StsError, error_message);
     }
 
-
-
-
-
-
-
-
     FeatureExtraction *fe = new FeatureExtraction("/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/ResNetModel/dlib_face_recognition_resnet_model_v1.dat");
 
-//    String windowName = "Constanza"; //Name of the window
-//
-//    namedWindow(windowName); // Create a window
-//
-//    imshow(windowName, samples[0]); // Show our image inside the created window.
-//
-//    waitKey(0);
 
     bool flag = false;
     double hits = 0;
     int misses = 0;
 
 
-    for (int i = 0; i < 10; ++i) {
-        dlib::matrix<float,0,1> descriptor1 = fe->ComputeDescriptorForFaceDlib(samples[i]);
-        for (int j = 0; j < samples.size(); ++j) {
-            if(i != j){
-                dlib::matrix<float,0,1> descriptor2 = fe->ComputeDescriptorForFaceDlib(samples[j]);
-                double compareRes = fe->compareFeaturesDlib(descriptor1, descriptor2);
-                cout << "Comparison between picture " << i << " and picture " << j << " => " << compareRes << " | Prediction: ";
-                if(compareRes<0.65){
-                    flag = true;
-                    cout << "They are the same person. ";
-                }
-                else{
-                    flag = false;
-                    cout << "They aren't the same person. ";
-                }
-                if ((labels[i]==labels[j] && flag) || (labels[i]!=labels[j] && !flag)){
-                    cout << "Correct!" << endl;
-                    hits++;
+//    for (int i = 0; i < 10; ++i) {
+//        cv::Mat descriptor1 = fe->ComputeDescriptorForFace(samples[i]);
+//        for (int j = 0; j < samples.size(); ++j) {
+//            if(i != j){
+//                cv::Mat descriptor2 = fe->ComputeDescriptorForFace(samples[j]);
+//                dlib::matrix<float,128,1> dlib1 = fe->toDlib(descriptor1); //conversion problem (Wrapper?)
+//                dlib::matrix<float,128,1> dlib2 = fe->toDlib(descriptor2);
+//                double compareRes = fe->compareFeaturesDlib(dlib1, dlib2);
+//                cout << "Comparison between picture " << i << " and picture " << j << " => " << compareRes << " | Prediction: ";
+//                if(compareRes<0.60){
+//                    flag = true;
+//                    cout << "They are the same person. ";
+//                }
+//                else{
+//                    flag = false;
+//                    cout << "They aren't the same person. ";
+//                }
+//                if ((labels[i]==labels[j] && flag) || (labels[i]!=labels[j] && !flag)){
+//                    cout << "Correct!" << endl;
+//                    hits++;
+//
+//                }
+//                else{
+//                    cout << "Wrong." << endl;
+//                    misses++;
+//                }
+//            }
+//        }
+//        cout << descriptor1 << endl;
+//    }
+//    cout << "Accuracy after rotation: " << hits*100/720 << endl;
 
-                }
-                else{
-                    cout << "Wrong." << endl;
-                    misses++;
-                }
-            }
-        }
-    }
-    cout << "Accuracy after rotation: " << hits*100/720 << endl;
+    cv::Mat descriptor1 = fe->ComputeDescriptorForFace(samples[0]);
+    cv::Mat descriptor2 = fe->ComputeDescriptorForFace(samples[0]);
+
+    dlib::matrix<float,128,1> descDlib1 = fe->toDlib(descriptor1);
+    dlib::matrix<float,128,1> descDlib2 = fe->toDlib(descriptor2);
+    double compare = fe->compareFeaturesDlib(descDlib1,descDlib2);
+
+    cout << compare << endl;
+
     return 0;
 }

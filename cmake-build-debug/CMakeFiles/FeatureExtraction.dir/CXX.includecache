@@ -9,14 +9,38 @@
 /Library/Frameworks/Mono.framework/Headers/gif_lib.h
 
 /Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/Executable.cpp
-FeatureExtraction.h
-/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/FeatureExtraction.h
+FeatureExtraction.cpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/FeatureExtraction.cpp
 iostream
 -
 fstream
 -
 sstream
 -
+
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/FeatureExtraction.cpp
+opencv2/core.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/core.hpp
+opencv2/face.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/face.hpp
+opencv2/highgui.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/highgui.hpp
+opencv2/imgproc.hpp
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/opencv2/imgproc.hpp
+NeuralNetworkTemplate.h
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/NeuralNetworkTemplate.h
+dlib/opencv.h
+-
+dlib/image_io.h
+-
+iostream
+-
+fstream
+-
+sstream
+-
+FeatureExtraction.h
+/Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/FeatureExtraction.h
 
 /Yann Le Lorier/TEC/Semestre 5/Software engineering/git_repo/git_repo2/Facial-features-extraction-and-comparison/FeatureExtraction.h
 opencv2/core.hpp

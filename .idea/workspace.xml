@@ -13,19 +13,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e9b149a-4c9f-442a-bdac-a5cea1c2d853" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/FeatureExtraction.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Executable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Executable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FeatureExtraction.h" beforeDir="false" afterPath="$PROJECT_DIR$/FeatureExtraction.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_CreateCSV/color_images.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Python_CreateCSV/color_images.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_CreateCSV/color_images/Constanza.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Python_CreateCSV/color_images/Constanza.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_CreateCSV/color_images/Constanza2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Python_CreateCSV/color_images/Constanza2.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_CreateCSV/color_images/Seinfeld.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Python_CreateCSV/color_images/Seinfeld.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_CreateCSV/color_images/Seinfeld2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Python_CreateCSV/color_images/Seinfeld2.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FeatureExtraction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python_CreateCSV/celeb_images.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Python_CreateCSV/celeb_images.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/Executable.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FeatureExtraction.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FeatureExtraction.cbp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,10 +39,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Executable.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="111" column="55" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
+            <state relative-caret-position="265">
+              <caret line="104" column="11" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="11" />
               <folding>
                 <element signature="e#107#126#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FeatureExtraction.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="843">
+              <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,10 +63,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FeatureExtraction.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+            <state relative-caret-position="146">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding>
-                <element signature="e#0#27#0" expanded="true" />
+                <element signature="e#51#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NeuralNetworkTemplate.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
+            <state relative-caret-position="255">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#184#301#0" expanded="true" />
@@ -90,6 +98,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>float,0,</find>
+      <find>&lt;float</find>
+      <find>&lt;double</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -100,13 +115,15 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/NeuralNetworkTemplate.h" />
         <option value="$PROJECT_DIR$/Executable.cpp" />
+        <option value="$PROJECT_DIR$/FeatureExtraction.cpp" />
         <option value="$PROJECT_DIR$/FeatureExtraction.h" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="800" />
-    <option name="height" value="600" />
+    <option name="x" value="1440" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectId" id="1RAKExIqrzMV9K4yOPo1Zj7tEDy" />
   <component name="ProjectView">
@@ -114,6 +131,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,7 +148,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -214,29 +231,32 @@
       <workItem from="1570574456066" duration="1279000" />
       <workItem from="1570651321776" duration="272000" />
       <workItem from="1570675537865" duration="7713000" />
+      <workItem from="1570689203336" duration="641000" />
+      <workItem from="1570719822640" duration="2078000" />
+      <workItem from="1571505127686" duration="6131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44144000" />
+    <option name="totallyTimeSpent" value="52994000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21101573" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14536741" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24216868" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36336634" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Floobits" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32772276" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" />
@@ -247,12 +267,12 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23748212" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39973614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24216868" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37924528" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -326,13 +346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/dlib/19.17/include/dlib/matrix/matrix.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-907">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/complex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -387,13 +400,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Python_CreateCSV/modified_data.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="149" selection-start-line="11" selection-end-line="11" selection-end-column="149" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file:///usr/local/Cellar/opencv/4.1.1_2/include/opencv4/opencv2/imgproc.hpp">
@@ -413,19 +426,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Executable.cpp">
+    <entry file="file:///usr/local/Cellar/dlib/19.17/include/dlib/matrix/matrix.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="111" column="55" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
+        <state relative-caret-position="3914">
+          <caret line="2162" column="27" selection-start-line="2162" selection-start-column="19" selection-end-line="2162" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dlib/19.17/include/dlib/opencv/cv_image.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
           <folding>
-            <element signature="e#107#126#0" expanded="true" />
+            <element signature="e#432#471#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NeuralNetworkTemplate.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
+        <state relative-caret-position="255">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#184#301#0" expanded="true" />
@@ -445,12 +465,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FeatureExtraction.h">
+    <entry file="file://$PROJECT_DIR$/Executable.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        <state relative-caret-position="265">
+          <caret line="104" column="11" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="11" />
+          <folding>
+            <element signature="e#107#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureExtraction.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="843">
+          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureExtraction.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="e#51#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
