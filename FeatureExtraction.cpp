@@ -11,7 +11,6 @@
 
 #include "FeatureExtraction.h" //including our class
 
-//using namespace std;
 
 cv::Mat FeatureExtraction::ComputeDescriptorForFace(cv::Mat &face){
     dlib::cv_image<dlib::bgr_pixel> cvImage(face);
@@ -36,9 +35,15 @@ double FeatureExtraction::compareFeaturesCV(cv::Mat h1, cv::Mat h2, int method){
      * 3: Bhattacharyya
      * 4: Synonym
      * 5: Alternative Chi-Squared
+     * 6: Euclidean distance or write EUCL_DIST
      */
     double dist = 0.0;
-    dist = compareHist(h1,h2,method);
+
+    if (method == 6)
+        dist = cv::norm(h1,h2);
+    else
+        dist = compareHist(h1,h2,method);
+
     return dist;
 
 

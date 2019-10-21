@@ -101,11 +101,9 @@ int main(int argc, const char *argv[]) {
 //    cout << "Accuracy after rotation: " << hits*100/720 << endl;
 
     cv::Mat descriptor1 = fe->ComputeDescriptorForFace(samples[0]);
-    cv::Mat descriptor2 = fe->ComputeDescriptorForFace(samples[0]);
+    cv::Mat descriptor2 = fe->ComputeDescriptorForFace(samples[1]);
 
-    dlib::matrix<float,128,1> descDlib1 = fe->toDlib(descriptor1);
-    dlib::matrix<float,128,1> descDlib2 = fe->toDlib(descriptor2);
-    double compare = fe->compareFeaturesDlib(descDlib1,descDlib2);
+    double compare = fe->compareFeaturesCV(descriptor1,descriptor2, EUCL_DIST);
 
     cout << compare << endl;
 

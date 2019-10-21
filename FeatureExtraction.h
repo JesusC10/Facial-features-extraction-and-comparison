@@ -13,6 +13,7 @@
 #include <fstream>
 #include <sstream>
 
+#define EUCL_DIST 6
 
 class FeatureExtraction {
 private:
