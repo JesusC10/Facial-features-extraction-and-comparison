@@ -1,5 +1,5 @@
-HOW DOES IT WORK:
-This module works using a neural network model that is used to generate vector descriptors given a set of normalized images. 
+// HOW DOES IT WORK:
+// This module works using a neural network model that is used to generate vector descriptors given a set of normalized images. 
 
 
 
