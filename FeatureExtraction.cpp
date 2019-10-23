@@ -9,23 +9,20 @@
 #include <fstream>
 #include <sstream>
 
-#include "FeatureExtraction.h" //including our class
-
+#include "FeatureExtraction.h" 
 
 cv::Mat FeatureExtraction::ComputeDescriptorForFace(cv::Mat &face){
-    dlib::cv_image<dlib::bgr_pixel> cvImage(face);
-    dlib::matrix<dlib::rgb_pixel> dlibImage;
-    dlib::assign_image(dlibImage, cvImage);
-    std::vector<dlib::matrix<dlib::rgb_pixel>> faces(1, dlibImage);
-    dlib::matrix<float,128,1> faceDescriptor = mean(mat(net(faces))); //computing face descriptor
+    dlib::cv_image<dlib::bgr_pixel> cvImage(face);  // Wraps the cv::Mat image into a dlib::cv_image
+    dlib::matrix<dlib::rgb_pixel> dlibImage; // Instantiates a dlibImage
+    dlib::assign_image(dlibImage, cvImage); // Sets the cvImage to a dlibImage
+    std::vector<dlib::matrix<dlib::rgb_pixel>> faces(1, dlibImage); 
+    dlib::matrix<float,128,1> faceDescriptor = mean(mat(net(faces))); // Computes face descriptor
 //    std::vector<dlib::matrix<float,0,1>> faceDescriptor = net(faces);
-
-
-    return dlib::toMat(faceDescriptor);
+    return dlib::toMat(faceDescriptor); // Transforms it into a cv::Mat
 }
 
 
-
+// Method that computes the Eucledian Distance between two cv::Mat descriptors
 double FeatureExtraction::compareFeaturesCV(cv::Mat h1, cv::Mat h2, int method){
     /*
      * Methods: From 0 to 5
@@ -45,30 +42,17 @@ double FeatureExtraction::compareFeaturesCV(cv::Mat h1, cv::Mat h2, int method){
         dist = compareHist(h1,h2,method);
 
     return dist;
-
-
 }
 
 double FeatureExtraction::compareFeaturesDlib(dlib::matrix<float,128,1> &descriptor1, dlib::matrix<float,128,1> &descriptor2){
-    std::vector<dlib::matrix<float,128,1>> faces;
+    std::vector<dlib::matrix<float,128,1>> faces; //Create a vector to insert the descriptors
     faces.push_back(descriptor1);
     faces.push_back(descriptor2);
-
-    return length(faces[0]-faces[1]);
+    return length(faces[0]-faces[1]); // Calculates the distance between the two faces
 }
 
+// Method to convert a dlib::matrix into a cv::Mat
 cv::Mat FeatureExtraction::convertToMat(dlib::matrix<float,128,1> descriptor){
-    cv::Mat cvDescriptor = dlib::toMat(descriptor);
+    cv::Mat cvDescriptor = dlib::toMat(descriptor); 
     return cvDescriptor;
-}
-
-dlib::matrix<float,128,1> FeatureExtraction::toDlib(cv::Mat descriptor){
-    //how to convert without losing info
-    dlib::matrix<float,128,1> res; //losing info (rounding error)
-    for (int i = 0; i < 128; ++i) {
-        res(i,0) = descriptor.at<float>(i,0);
-        std::cout << res(i,0)<< std::endl;
-        std::cout << descriptor.at<float>(i,0) << std::endl;
-    }
-    return res;
 }
