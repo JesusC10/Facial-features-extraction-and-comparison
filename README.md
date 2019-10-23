@@ -30,9 +30,7 @@ On the main executable:
      Example: 
      
      
-        cv::Mat descriptor1 = fe->ComputeDescriptorForFace(image_1);
-        
-        
+        cv::Mat descriptor1 = fe->ComputeDescriptorForFace(image_1);       
         cv::Mat descriptor2 = fe->ComputeDescriptorForFace(image_2);
 
 4) Create a variable (double) that will be used to store the Eucledian Distance between one descriptor and the other. For this, a call to the FeatureExtraction method compareFeaturesCV(descriptor1, descriptor2, EUCL_DIST) is needed. EUCL_DIST is a global variable that is set to 6.
