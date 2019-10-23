@@ -1,44 +1,25 @@
-# Facial-features-extraction-and-comparison
-    // The LBPHFaceRecognizer uses Extended Local Binary Patterns
-    // (it's probably configurable with other operators at a later
-    // point), and has the following default values
-    //
-    //      radius = 1
-    //      neighbors = 8
-    //      grid_x = 8
-    //      grid_y = 8
-    //
-    // So if you want a LBPH FaceRecognizer using a radius of
-    // 2 and 16 neighbors, call the factory method with:
-    //
-    //      cv::face::LBPHFaceRecognizer::create(2, 16);
-    //
-    // And if you want a threshold (e.g. 123.0) call it with its default values:
-    //
-    //      cv::face::LBPHFaceRecognizer::create(1,8,8,8,123.0)
+HOW DOES IT WORK:
+This module works using a neural network model that is used to generate vector descriptors given a set of normalized images. 
 
 
-    //int predictedLabel = model->predict(testSample); // Predicts the label of a given face after the train method has been called (comparison).
 
-    // To get the confidence of a prediction call the model with:
-    //
-//    int predictedLabel = -1;
-//    double confidence = 1.0;
-//    model->predict(testSample, predictedLabel, confidence);
+HOW TO USE IT:
+On the main executable:
+1) Include the "FeatureExtracion.cpp" file.
 
-    //string result_message = format("Predicted class = %d / Actual class = %d.", predictedLabel, testLabel);
-    //cout << result_message << endl;
-    // First we'll use it to set the threshold of the LBPHFaceRecognizer
-    // to 0.0 without retraining the model. This can be useful if
-    // you are evaluating the model:
-    //
-    // model->setThreshold(0.0);
-    // Now the threshold of this model is set to 0.0. A prediction
-    // now returns -1, as it's impossible to have a distance below
-    // it
-    // predictedLabel = model->predict(testSample);
-    // cout << "Predicted class = " << predictedLabel << endl;
-    // Show some informations about the model, as there's no cool
-    // Model data to display as in Eigenfaces/Fisherfaces.
-    // Due to efficiency reasons the LBP images are not stored
-    // within the model:
+2) Create an instance of the FeatureExtraction class and send to the constructor the path for the following file as a parameter: 
+    "dlib_face_recognition_resnet_model_v1.dat". 
+     Example: 
+         FeatureExtraction * fe = new FeatureExtraction("dlib_face_recognition_resnet_model_v1.dat");
+     The file can be found in ResNetModel directory.
+
+3) Create two instances of the cv::Mat class and set each one of them to the FeatureExtraction method ComputeDescriptorForFace(image), where image is an indivdual output image (cv::Mat) obtained from the previous or next module, depending on the use case. These instances will create two descriptors that will be compared between one another.
+     Example: 
+        cv::Mat descriptor1 = fe->ComputeDescriptorForFace(image_1);
+        cv::Mat descriptor2 = fe->ComputeDescriptorForFace(image_2);
+
+4) Create a variable (double) that will be used to store the Eucledian Distance between one descriptor and the other. For this, a call to the FeatureExtraction method compareFeaturesCV(descriptor1, descriptor2, EUCL_DIST) is needed. EUCL_DIST is a global variable that is set to 6.
+    Example:
+        double distance = fe->compareFeaturesCV(descriptor1,descriptor2, EUCL_DIST);
+        
+The variable distance is the value that will determine whether or not two image descriptors correspond to the same person.
