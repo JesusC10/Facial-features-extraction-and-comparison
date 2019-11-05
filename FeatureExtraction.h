@@ -25,9 +25,6 @@ public:
     }
     cv::Mat ComputeDescriptorForFace(cv::Mat &face); //comms w module 2
     double compareFeaturesCV(cv::Mat h1, cv::Mat h2, int method);
-    double compareFeaturesDlib(dlib::matrix<float,128,1> &descriptor1, dlib::matrix<float,128,1> &descriptor2);
-    cv::Mat convertToMat(dlib::matrix<float,128,1> descriptor); //comms w module 4
-    dlib::matrix<float,128,1> toDlib(cv::Mat descriptor);
 };
 
 
